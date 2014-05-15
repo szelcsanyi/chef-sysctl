@@ -1,3 +1,5 @@
+# Copyright 2014, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
+
 define :sysctl_parameter, :comment => "", :immediately => false do
 
 	t = nil

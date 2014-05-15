@@ -1,3 +1,8 @@
+#
+# Cookbook Name:: sysctl
+# Recipe:: disable_ipv6
+#
+# Copyright 2014, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
 
 sysctl_parameter "net.ipv6.conf.all.disable_ipv6" do
 	comment "disable ipv6"

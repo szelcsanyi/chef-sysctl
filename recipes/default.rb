@@ -1,3 +1,9 @@
+#
+# Cookbook Name:: sysctl
+# Recipe:: default
+#
+# Copyright 2014, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
+
 service "procps" do
 	supports :restart => true, :start => true, :stop => true
 	action :nothing

@@ -1,3 +1,9 @@
+#
+# Cookbook Name:: sysctl
+# Recipe:: tune_tcp_stack
+#
+# Copyright 2014, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
+
 sysctl_parameter "net.ipv4.tcp_mem" do
 	comment "Tune tcp stack"
 	value "8388608	12582912	167772160"

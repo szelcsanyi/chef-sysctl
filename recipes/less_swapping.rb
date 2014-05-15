@@ -1,3 +1,9 @@
+#
+# Cookbook Name:: sysctl
+# Recipe:: less_swapping
+#
+# Copyright 2014, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
+
 # Do less swapping
 
 sysctl_parameter "vm.swappiness" do

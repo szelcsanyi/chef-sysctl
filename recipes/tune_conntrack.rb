@@ -1,3 +1,9 @@
+#
+# Cookbook Name:: sysctl
+# Recipe:: tune_conntrack
+#
+# Copyright 2014, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
+
 sysctl_parameter "net.nf_conntrack_max" do 
 	comment "Conntrack settings"
 	value "9145728"

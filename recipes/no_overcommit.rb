@@ -1,3 +1,9 @@
+#
+# Cookbook Name:: sysctl
+# Recipe:: no_overcommit
+#
+# Copyright 2014, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
+
 # No overcommitment of available memory
 
 sysctl_parameter "vm.overcommit_ratio" do

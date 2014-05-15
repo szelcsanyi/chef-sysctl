@@ -1,3 +1,8 @@
+#
+# Cookbook Name:: sysctl
+# Recipe:: tune_vfs
+#
+# Copyright 2014, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
 
 sysctl_parameter "fs.file-max" do
 	value "402400"
