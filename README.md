@@ -2,11 +2,9 @@
 
 ## Description
 
-Configures sysctl parameters in /etc/sysctl.conf
+Configures [sysctl](http://en.wikipedia.org/wiki/Sysctl) system control parameters via Opscode Chef in /etc/sysctl.conf
 
-## Requirements
-
-### Supported Platforms
+## Supported Platforms
 
 * Ubuntu
 * Debian
@@ -14,16 +12,17 @@ Configures sysctl parameters in /etc/sysctl.conf
 ## Recipes
 
 * `sysctl` - The default no-op recipe.
-* `basic_securty` - Sets kernel level security settings.
-* `disable_ipv6` - If you do not use ipv6 then disable it.
-* `enable_forwarding` - Enables ipv4 forwarding.
-* `less_swapping` - Decrease swap ratio to 10 for less swapping.
-* `no_overcommit` - Do not overcommit available memory.
-* `panic` - Reboot on kernel panic.
-* `tune_conntrack` - Increase connection tracking buffers.
-* `tune_shm` - Increase shm.
-* `tune_tck_stack` - Tune tcp stack for higher throughput.
-* `tune_vfs` - Tune vfs.
+* Predefined parameters:
+* `sysctl::basic_securty` - Sets kernel level security settings.
+* `sysctl::disable_ipv6` - If you do not use ipv6 then disable it.
+* `sysctl::enable_forwarding` - Enables ipv4 forwarding.
+* `sysctl::less_swapping` - Decrease swap ratio to 10 for less swapping.
+* `sysctl::no_overcommit` - Do not overcommit available memory.
+* `sysctl::panic` - Reboot on kernel panic.
+* `sysctl::tune_conntrack` - Increase connection tracking buffers.
+* `sysctl::tune_shm` - Increase shm.
+* `sysctl::tune_tck_stack` - Tune tcp stack for higher throughput.
+* `sysctl::tune_vfs` - Tune vfs.
 
 ## Usage
 * name: the sysctl parameter
@@ -53,6 +52,5 @@ end
 
 ## License
 
-**sysctl**
-
 * Freely distributable and licensed under the [MIT license](http://szelcsanyi.mit-license.org/2014/license.html).
+* Copyright (c) 2014 Gabor Szelcsanyi
