@@ -1,5 +1,5 @@
 # sysctl cookbook
-[![Build Status](http://img.shields.io/travis-ci/szelcsanyi/chef-sysctl.png)](https://travis-ci.org/szelcsanyi/chef-sysctl)
+[![Build Status](https://travis-ci.org/szelcsanyi/chef-sysctl.svg?branch=master)](https://travis-ci.org/szelcsanyi/chef-sysctl)
 
 ## Description
 
