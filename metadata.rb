@@ -1,11 +1,11 @@
-maintainer       "Gabor Szelcsanyi"
-maintainer_email "szelcsanyi.gabor@gmail.com"
-license          "MIT"
-description      "Configures sysctl"
+maintainer       'Gabor Szelcsanyi'
+maintainer_email 'szelcsanyi.gabor@gmail.com'
+license          'MIT'
+description      'Configures sysctl'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-name             "sysctl"
-version          "0.1.0"
+name             'sysctl'
+version          '0.1.1'
 
-%w{ ubuntu debian }.each do |os| 
-    supports os
+%w( ubuntu debian ).each do |os|
+  supports os
 end
