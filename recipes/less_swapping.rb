@@ -25,4 +25,3 @@ sysctl_parameter 'vm.vfs_cache_pressure' do
   value '10000'
   immediately true
 end
-
