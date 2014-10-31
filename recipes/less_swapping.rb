@@ -12,7 +12,7 @@ sysctl_parameter 'vm.swappiness' do
 end
 
 sysctl_parameter 'vm.dirty_ratio' do
-  value '60'
+  value '20'
   immediately true
 end
 
@@ -20,3 +20,9 @@ sysctl_parameter 'vm.dirty_background_ratio' do
   value '2'
   immediately true
 end
+
+sysctl_parameter 'vm.vfs_cache_pressure' do
+  value '10000'
+  immediately true
+end
+
