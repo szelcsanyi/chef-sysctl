@@ -24,6 +24,7 @@ Configures [sysctl](http://en.wikipedia.org/wiki/Sysctl) system control paramete
 * `sysctl::tune_shm` - Increase shm.
 * `sysctl::tune_tck_stack` - Tune tcp stack for higher throughput.
 * `sysctl::tune_vfs` - Tune vfs.
+* `sysctl::disable_bridge_nf_call` - Disable netfilter calls on bridged packets.
 
 ## Usage
 * name: the sysctl parameter
