@@ -6,23 +6,23 @@
 
 sysctl_parameter 'net.ipv4.tcp_mem' do
   comment 'Tune tcp stack'
-  value '8388608  12582912  167772160'
+  value '8388608	12582912	167772160'
   immediately true
 end
 
 sysctl_parameter 'net.ipv4.udp_mem' do
-  value '8388608  12582912  167772160'
+  value '8388608	12582912	167772160'
   immediately true
 end
 
 sysctl_parameter 'net.ipv4.ip_local_port_range' do
-  value '1024 65535'
+  value '1024	65535'
   immediately true
 end
 
 # Increase the maximum read-buffer space allocatable
 sysctl_parameter 'net.ipv4.tcp_rmem' do
-  value '8192 87380 167772160'
+  value '8192	87380	167772160'
   immediately true
 end
 
@@ -33,7 +33,7 @@ end
 
 # Increase the maximum write-buffer-space allocatable
 sysctl_parameter 'net.ipv4.tcp_wmem' do
-  value '8192 65536 167772160'
+  value '8192	65536	167772160'
   immediately true
 end
 
