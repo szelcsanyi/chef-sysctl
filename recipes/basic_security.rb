@@ -6,7 +6,7 @@
 
 # Controls the System Request debugging functionality of the kernel
 sysctl_parameter 'kernel.sysrq' do
-  comment "Basic security"
+  comment 'Basic security'
   value '0'
   immediately true
 end
