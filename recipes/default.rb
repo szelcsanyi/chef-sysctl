@@ -4,6 +4,10 @@
 #
 # Copyright 2014, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
 
+package 'procps' do
+  action :upgrade
+end
+
 service 'procps' do
   supports restart: true, start: true, stop: true
   action :nothing

@@ -25,3 +25,8 @@ sysctl_parameter 'vm.vfs_cache_pressure' do
   value '10000'
   immediately true
 end
+
+sysctl_parameter 'vm.dirty_expire_centisecs' do
+  value '30000'
+  immediately true
+end

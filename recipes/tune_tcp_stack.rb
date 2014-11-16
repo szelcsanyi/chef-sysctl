@@ -223,3 +223,13 @@ sysctl_parameter 'net.ipv4.tcp_low_latency' do
   value '1'
   immediately true
 end
+
+sysctl_parameter 'net.core.rps_sock_flow_entries' do
+  value '32768'
+  immediately true
+end
+
+sysctl_parameter 'net.ipv4.tcp_early_retrans' do
+  value '1'
+  immediately true
+end
