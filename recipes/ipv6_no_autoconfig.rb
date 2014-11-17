@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: sysctl
-# Recipe:: basic_security
+# Recipe:: ipv6_no_autoconfig
 #
 # Copyright 2014, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
 
