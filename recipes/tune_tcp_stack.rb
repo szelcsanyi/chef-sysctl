@@ -5,24 +5,26 @@
 # Copyright 2014, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
 
 sysctl_parameter 'net.ipv4.tcp_mem' do
-  comment 'Tune tcp stack'
-  value '8388608	12582912	167772160'
+  comment 'Increase the maximum total buffer-space allocatable for tcp'
+  value '65536	131072	262144'
   immediately true
 end
 
 sysctl_parameter 'net.ipv4.udp_mem' do
-  value '8388608	12582912	167772160'
+  comment 'Increase the maximum total buffer-space allocatable for udp'
+  value '65536	131072	262144'
   immediately true
 end
 
 sysctl_parameter 'net.ipv4.ip_local_port_range' do
+  comment 'Allowed local port range'
   value '1024	65535'
   immediately true
 end
 
-# Increase the maximum read-buffer space allocatable
 sysctl_parameter 'net.ipv4.tcp_rmem' do
-  value '8192	87380	167772160'
+  comment 'Increase the maximum read-buffer space allocatable'
+  value '8192	262144	16777216'
   immediately true
 end
 
@@ -31,9 +33,9 @@ sysctl_parameter 'net.ipv4.udp_rmem_min' do
   immediately true
 end
 
-# Increase the maximum write-buffer-space allocatable
 sysctl_parameter 'net.ipv4.tcp_wmem' do
-  value '8192	65536	167772160'
+  comment 'Increase the write-buffer-space allocatable'
+  value '8192	262144	16777216'
   immediately true
 end
 
@@ -42,31 +44,33 @@ sysctl_parameter 'net.ipv4.udp_wmem_min' do
   immediately true
 end
 
-# Increase the maximum and default receive socket buffer size
 sysctl_parameter 'net.core.rmem_max' do
-  value '167772160'
+  comment 'Maximum Socket Receive Buffer'
+  value '16777216'
   immediately true
 end
 
 sysctl_parameter 'net.core.rmem_default' do
-  value '262143'
+  comment 'Default Socket Receive Buffer'
+  value '16777216'
   immediately true
 end
 
-# Increase the maximum and default send socket buffer size
 sysctl_parameter 'net.core.wmem_max' do
-  value '167772160'
+  comment 'Maximum Socket Send Buffer'
+  value '16777216'
   immediately true
 end
 
 sysctl_parameter 'net.core.wmem_default' do
-  value '262143'
+  comment 'Default Socket Send Buffer'
+  value '16777216'
   immediately true
 end
 
-# Increase the maximum amount of option memory buffers
 sysctl_parameter 'net.core.optmem_max' do
-  value '2048000'
+  comment 'Increase the maximum amount of option memory buffers'
+  value '25165824'
   immediately true
 end
 
@@ -91,8 +95,8 @@ sysctl_parameter 'net.ipv4.tcp_fack' do
   immediately true
 end
 
-# Increase the tcp-time-wait buckets pool size
 sysctl_parameter 'net.ipv4.tcp_max_tw_buckets' do
+  comment 'Increase the tcp-time-wait buckets pool size'
   value '1440000'
   immediately true
 end
@@ -118,13 +122,14 @@ sysctl_parameter 'net.ipv4.ipfrag_low_thresh' do
   immediately true
 end
 
-# Increase number of incoming connections
 sysctl_parameter 'net.core.somaxconn' do
+  value 'Increase number of incoming connections'
   value '65535'
   immediately true
 end
 
 sysctl_parameter 'net.core.netdev_max_backlog' do
+  comment 'Increase number of incoming connections backlog'
   value '262144'
   immediately true
 end
@@ -180,6 +185,7 @@ sysctl_parameter 'net.ipv4.tcp_ecn' do
 end
 
 sysctl_parameter 'net.ipv4.tcp_rfc1337' do
+  comment 'Protect Against TCP Time-Wait'
   value '1'
   immediately true
 end
