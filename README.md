@@ -1,5 +1,6 @@
 # sysctl cookbook
 [![Build Status](https://travis-ci.org/szelcsanyi/chef-sysctl.svg?branch=master)](https://travis-ci.org/szelcsanyi/chef-sysctl)
+[![security](https://hakiri.io/github/szelcsanyi/chef-sysctl/master.svg)](https://hakiri.io/github/szelcsanyi/chef-sysctl/master)
 
 ## Description
 
