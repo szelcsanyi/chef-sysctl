@@ -5,7 +5,7 @@
 # Copyright 2014, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
 
 package 'procps' do
-  action :upgrade
+  action :install
 end
 
 service 'procps' do
