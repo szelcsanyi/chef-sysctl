@@ -4,7 +4,7 @@
 #
 # Copyright 2015, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
 
-bash "insert tcp-yeah kernel module" do
+bash 'insert tcp-yeah kernel module' do
   user 'root'
   code <<-EOH
   modprobe tcp-yeah
