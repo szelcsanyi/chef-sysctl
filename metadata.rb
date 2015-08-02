@@ -4,7 +4,7 @@ license          'MIT'
 description      'Configures sysctl'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 name             'sysctl'
-version          '0.1.3'
+version          '0.1.4'
 
 %w( ubuntu debian ).each do |os|
   supports os
