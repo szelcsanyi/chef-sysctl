@@ -2,9 +2,9 @@
 # Cookbook Name:: sysctl
 # Recipe:: panic
 #
-# Copyright 2014, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
+# Copyright 2015, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
 
-sysctl_parameter 'kernel.panic' do
+L7_sysctl 'kernel.panic' do
   comment 'Reboot on panic'
   value '10'
 end

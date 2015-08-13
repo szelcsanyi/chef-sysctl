@@ -1,6 +1,6 @@
-# Copyright 2014, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
+# Copyright 2015, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
 
-define :sysctl_parameter, comment: '', immediately: false do
+define :L7_sysctl, comment: '', immediately: false do
 
   t = nil
   begin
@@ -11,7 +11,7 @@ define :sysctl_parameter, comment: '', immediately: false do
       owner 'root'
       group 'root'
       source 'etc/sysctl.conf.erb'
-      cookbook 'sysctl'
+      cookbook 'L7-sysctl'
       variables(parameters: [])
     end
   end

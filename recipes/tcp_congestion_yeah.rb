@@ -20,6 +20,6 @@ bash 'add tcp-yeah module to modules' do
   not_if 'grep "^tcp-yeah$" /etc/modules'
 end
 
-sysctl_parameter 'net.ipv4.tcp_congestion_control' do
+L7_sysctl 'net.ipv4.tcp_congestion_control' do
   value 'yeah'
 end

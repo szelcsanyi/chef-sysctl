@@ -1,6 +1,7 @@
 # sysctl cookbook
 [![Build Status](https://travis-ci.org/szelcsanyi/chef-sysctl.svg?branch=master)](https://travis-ci.org/szelcsanyi/chef-sysctl)
 [![security](https://hakiri.io/github/szelcsanyi/chef-sysctl/master.svg)](https://hakiri.io/github/szelcsanyi/chef-sysctl/master)
+[![Cookbook Version](https://img.shields.io/cookbook/v/L7-sysctl.svg?style=flat)](https://supermarket.chef.io/cookbooks/L7-sysctl)
 
 ## Description
 
@@ -8,37 +9,40 @@ Configures [sysctl](http://en.wikipedia.org/wiki/Sysctl) system control paramete
 
 ## Supported Platforms
 
-* Ubuntu
-* Debian
+* Ubuntu 12.04+
+* Debian 7.0+
 
 ## Recipes
 
-* `sysctl` - The default no-op recipe.
+* `L7-sysctl` - The default no-op recipe.
 * Predefined parameters:
-* `sysctl::basic_securty` - Sets kernel level security settings.
-* `sysctl::disable_ipv6` - If you do not use ipv6 then disable it.
-* `sysctl::enable_forwarding` - Enables ipv4 forwarding.
-* `sysctl::less_swapping` - Decrease swap ratio to 10 for less swapping.
-* `sysctl::no_overcommit` - Do not overcommit available memory.
-* `sysctl::panic` - Reboot on kernel panic.
-* `sysctl::tune_conntrack` - Increase connection tracking buffers.
-* `sysctl::tune_shm` - Increase shm.
-* `sysctl::tune_tck_stack` - Tune tcp stack for higher throughput.
-* `sysctl::tune_vfs` - Tune vfs.
-* `sysctl::disable_bridge_nf_call` - Disable netfilter calls on bridged packets.
-* `sysctl::ipv6_no_autoconfig` - No autoconfig for ipv6.
-* `sysctl::tcp_congestion_yeah` - Sets the tcp congestion control to [YeAH](http://infocom.uniroma1.it/~vacirca/yeah/yeah.pdf).
+* `L7-sysctl::basic_securty` - Sets kernel level security settings.
+* `L7-sysctl::disable_ipv6` - If you do not use ipv6 then disable it.
+* `L7-sysctl::enable_forwarding` - Enables ipv4 forwarding.
+* `L7-sysctl::less_swapping` - Decrease swap ratio to 10 for less swapping.
+* `L7-sysctl::no_overcommit` - Do not overcommit available memory.
+* `L7-sysctl::panic` - Reboot on kernel panic.
+* `L7-sysctl::tune_conntrack` - Increase connection tracking buffers.
+* `L7-sysctl::tune_shm` - Increase shm.
+* `L7-sysctl::tune_tck_stack` - Tune tcp stack for higher throughput.
+* `L7-sysctl::tune_vfs` - Tune vfs.
+* `L7-sysctl::disable_bridge_nf_call` - Disable netfilter calls on bridged packets.
+* `L7-sysctl::ipv6_no_autoconfig` - No autoconfig for ipv6.
+* `L7-sysctl::tcp_congestion_yeah` - Sets the tcp congestion control to [YeAH](http://infocom.uniroma1.it/~vacirca/yeah/yeah.pdf).
 
 ## Usage
-* name: the sysctl parameter
-* comment: optional string for identification
-* value: must be set to proper value
-* immediately: (true/false) set value at runtime or at the end of chef run
+* Include L7-sysctl::default recipe in your runlist.
+* Place 'depends L7-sysctl' in the metadata of your cookbook.
+
+* name: The sysctl parameter name.
+* comment: Optional string for identification.
+* value: Must be set to proper value.
+* immediately: Optional true/false. Sets value at runtime or at the end of chef run. Default: false.
 
 ```ruby
-sysctl_parameter "net.ipv4.ip_forward" do
-	comment "Enable ip forwarding"
-	value "1"
+L7_sysctl 'net.ipv4.ip_forward' do
+	comment 'Enable ip forwarding'
+	value '1'
 	immediately true
 end
 ```

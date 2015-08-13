@@ -2,7 +2,7 @@
 # Cookbook Name:: sysctl
 # Recipe:: default
 #
-# Copyright 2014, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
+# Copyright 2015, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
 
 package 'procps' do
   action :install

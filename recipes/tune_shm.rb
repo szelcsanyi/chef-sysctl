@@ -2,8 +2,8 @@
 # Cookbook Name:: sysctl
 # Recipe:: tune_shm
 #
-# Copyright 2014, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
+# Copyright 2015, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
 
-sysctl_parameter 'kernel.shmmax' do
-  value '134217728'
+L7_sysctl 'kernel.shmmax' do
+  value (node.memory.total.to_i * 1024 / 2).round
 end

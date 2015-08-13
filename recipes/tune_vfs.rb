@@ -1,13 +1,13 @@
 #
-# Cookbook Name:: sysctl
+# Cookbook Name:: L7_sysctl
 # Recipe:: tune_vfs
 #
-# Copyright 2014, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
+# Copyright 2015, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
 
-sysctl_parameter 'fs.file-max' do
+L7_sysctl 'fs.file-max' do
   value '402400'
 end
 
-sysctl_parameter 'fs.dir-notify-enable' do
+L7_sysctl 'fs.dir-notify-enable' do
   value '0'
 end
