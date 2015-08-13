@@ -1,4 +1,4 @@
-# sysctl cookbook
+# L7-sysctl cookbook
 [![Build Status](https://travis-ci.org/szelcsanyi/chef-sysctl.svg?branch=master)](https://travis-ci.org/szelcsanyi/chef-sysctl)
 [![security](https://hakiri.io/github/szelcsanyi/chef-sysctl/master.svg)](https://hakiri.io/github/szelcsanyi/chef-sysctl/master)
 [![Cookbook Version](https://img.shields.io/cookbook/v/L7-sysctl.svg?style=flat)](https://supermarket.chef.io/cookbooks/L7-sysctl)

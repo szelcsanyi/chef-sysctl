@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: sysctl
+# Cookbook Name:: L7-sysctl
 # Recipe:: less_swapping
 #
 # Copyright 2015, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>

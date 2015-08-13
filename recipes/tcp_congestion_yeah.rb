@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: sysctl
+# Cookbook Name:: L7-sysctl
 # Recipe:: tcp_congestion_yeah
 #
 # Copyright 2015, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>

@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: sysctl
+# Cookbook Name:: L7-sysctl
 # Recipe:: ipv6_no_autoconfig
 #
 # Copyright 2015, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>

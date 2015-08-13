@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: L7_sysctl
+# Cookbook Name:: L7-sysctl
 # Recipe:: tune_vfs
 #
 # Copyright 2015, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
