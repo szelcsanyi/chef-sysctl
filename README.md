@@ -29,6 +29,7 @@ Configures [sysctl](http://en.wikipedia.org/wiki/Sysctl) system control paramete
 * `L7-sysctl::disable_bridge_nf_call` - Disable netfilter calls on bridged packets.
 * `L7-sysctl::ipv6_no_autoconfig` - No autoconfig for ipv6.
 * `L7-sysctl::tcp_congestion_yeah` - Sets the tcp congestion control to [YeAH](http://infocom.uniroma1.it/~vacirca/yeah/yeah.pdf).
+* `L7-sysctl::tcp_fastopen` - Enable client/server side [tcp fast open](https://datatracker.ietf.org/doc/rfc7413/).
 
 ## Usage
 * Include L7-sysctl::default recipe in your runlist.
