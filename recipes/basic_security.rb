@@ -82,3 +82,8 @@ L7_sysctl 'kernel.pid_max' do
   value '65536'
   immediately true
 end
+
+# set perf only available to root
+L7_sysctl 'kernel.perf_event_paranoid' do
+  value '2'
+end
