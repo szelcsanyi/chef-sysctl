@@ -4,6 +4,9 @@
 #
 # Copyright 2015, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
 
+# Not in openvz guest
+return if File.exist?('/proc/vz')
+
 bash 'insert tcp-yeah kernel module' do
   user 'root'
   code <<-EOH
