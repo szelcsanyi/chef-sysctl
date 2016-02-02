@@ -24,7 +24,7 @@ Configures [sysctl](http://en.wikipedia.org/wiki/Sysctl) system control paramete
 * `L7-sysctl::panic` - Reboot on kernel panic.
 * `L7-sysctl::tune_conntrack` - Increase connection tracking buffers.
 * `L7-sysctl::tune_shm` - Increase shm.
-* `L7-sysctl::tune_tck_stack` - Tune tcp stack for higher throughput.
+* `L7-sysctl::tune_tck_stack` - Tune tcp stack for 1G/10G networks for higher throughput.
 * `L7-sysctl::tune_vfs` - Tune vfs.
 * `L7-sysctl::disable_bridge_nf_call` - Disable netfilter calls on bridged packets.
 * `L7-sysctl::ipv6_no_autoconfig` - No autoconfig for ipv6.
