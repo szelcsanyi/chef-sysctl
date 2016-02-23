@@ -37,10 +37,6 @@ L7_sysctl 'net.ipv6.conf.default.accept_redirects' do
   value 0
 end
 
-L7_sysctl 'net.ipv6.conf.default.forwarding' do
-  value 0
-end
-
 L7_sysctl 'net.ipv6.conf.all.autoconf' do
   value 0
 end
@@ -70,9 +66,5 @@ L7_sysctl 'net.ipv6.conf.all.accept_source_route' do
 end
 
 L7_sysctl 'net.ipv6.conf.all.accept_redirects' do
-  value 0
-end
-
-L7_sysctl 'net.ipv6.conf.all.forwarding' do
   value 0
 end
