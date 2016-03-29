@@ -2,29 +2,42 @@
 # Cookbook Name:: L7-sysctl
 # Recipe:: tune_tcp_stack
 #
-# Copyright 2015, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
+# Copyright 2016, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
 
-L7_sysctl 'net.ipv4.tcp_mem' do
-  comment 'Increase the maximum total buffer-space allocatable for tcp'
-  value '65536	131072	262144'
-  immediately true
-end
-
-L7_sysctl 'net.ipv4.udp_mem' do
-  comment 'Increase the maximum total buffer-space allocatable for udp'
-  value '65536	131072	262144'
-  immediately true
-end
-
-L7_sysctl 'net.ipv4.ip_local_port_range' do
-  comment 'Allowed local port range'
-  value '1024	65535'
-  immediately true
-end
 
 L7_sysctl 'net.ipv4.tcp_rmem' do
   comment 'Increase the maximum read-buffer space allocatable'
-  value '8192	262144	16777216'
+  value '8192	1048576	4194304'
+  immediately true
+end
+
+L7_sysctl 'net.ipv4.tcp_wmem' do
+  comment 'Increase the write-buffer space allocatable'
+  value '8192	1048576	4194304'
+  immediately true
+end
+
+L7_sysctl 'net.core.rmem_max' do
+  comment 'Maximum Socket Receive Buffer'
+  value '4194304'
+  immediately true
+end
+
+L7_sysctl 'net.core.wmem_max' do
+  comment 'Maximum Socket Send Buffer'
+  value '4194304'
+  immediately true
+end
+
+L7_sysctl 'net.core.rmem_default' do
+  comment 'Default Socket Receive Buffer'
+  value '1048576'
+  immediately true
+end
+
+L7_sysctl 'net.core.wmem_default' do
+  comment 'Default Socket Send Buffer'
+  value '1048576'
   immediately true
 end
 
@@ -33,44 +46,20 @@ L7_sysctl 'net.ipv4.udp_rmem_min' do
   immediately true
 end
 
-L7_sysctl 'net.ipv4.tcp_wmem' do
-  comment 'Increase the write-buffer-space allocatable'
-  value '8192	262144	16777216'
-  immediately true
-end
-
 L7_sysctl 'net.ipv4.udp_wmem_min' do
   value '16384'
-  immediately true
-end
-
-L7_sysctl 'net.core.rmem_max' do
-  comment 'Maximum Socket Receive Buffer'
-  value '16777216'
-  immediately true
-end
-
-L7_sysctl 'net.core.rmem_default' do
-  comment 'Default Socket Receive Buffer'
-  value '16777216'
-  immediately true
-end
-
-L7_sysctl 'net.core.wmem_max' do
-  comment 'Maximum Socket Send Buffer'
-  value '16777216'
-  immediately true
-end
-
-L7_sysctl 'net.core.wmem_default' do
-  comment 'Default Socket Send Buffer'
-  value '16777216'
   immediately true
 end
 
 L7_sysctl 'net.core.optmem_max' do
   comment 'Increase the maximum amount of option memory buffers'
   value '25165824'
+  immediately true
+end
+
+L7_sysctl 'net.ipv4.ip_local_port_range' do
+  comment 'Allowed local port range'
+  value '1024	65535'
   immediately true
 end
 
