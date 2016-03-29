@@ -11,7 +11,7 @@ L7_sysctl 'net.ipv4.tcp_fastopen' do
 end
 
 require 'digest/md5'
-checksum   = Digest::MD5.hexdigest(node['fqdn'] + '-hostname')
+checksum   = Digest::MD5.hexdigest(node.fqdn + '-hostname')
 fo_key = checksum[0, 8] + '-' + checksum[8, 8] + '-' + \
          checksum[16, 8] + '-' + checksum[24, 8]
 
