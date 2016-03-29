@@ -4,7 +4,6 @@
 #
 # Copyright 2016, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
 
-
 L7_sysctl 'net.ipv4.tcp_rmem' do
   comment 'Increase the maximum read-buffer space allocatable'
   value '8192	1048576	4194304'
@@ -100,8 +99,8 @@ L7_sysctl 'net.ipv4.tcp_tw_reuse' do
   immediately true
 end
 
-# Increase the maximum memory used to reassemble IP fragments
 L7_sysctl 'net.ipv4.ipfrag_high_thresh' do
+  comment 'Increase the maximum memory used to reassemble IP fragments'
   value '512000'
   immediately true
 end
