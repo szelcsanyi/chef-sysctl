@@ -20,4 +20,3 @@ L7_sysctl 'net.ipv4.tcp_fastopen_key' do
   value fo_key
   immediately true
 end
-
