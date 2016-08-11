@@ -4,7 +4,7 @@ license          'MIT'
 description      'Configures sysctl parameters'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 name             'L7-sysctl'
-version          '0.1.12'
+version          '0.1.13'
 source_url       'https://github.com/szelcsanyi/chef-sysctl'
 issues_url       'https://github.com/szelcsanyi/chef-sysctl/issues'
 

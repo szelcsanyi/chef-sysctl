@@ -62,7 +62,7 @@ end
 
 ## License
 
-* Freely distributable and licensed under the [MIT license](http://szelcsanyi.mit-license.org/2015/license.html).
+* Freely distributable and licensed under the [MIT license](http://szelcsanyi.mit-license.org/2016/license.html).
 * Copyright (c) 2016 Gabor Szelcsanyi
 
 [![image](https://ga-beacon.appspot.com/UA-56493884-1/chef-sysctl/README.md)](https://github.com/szelcsanyi/chef-sysctl)

@@ -2,7 +2,7 @@
 # Cookbook Name:: L7-sysctl
 # Recipe:: basic_security
 #
-# Copyright 2015, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
+# Copyright 2016, Gabor Szelcsanyi <szelcsanyi.gabor@gmail.com>
 
 # Controls the System Request debugging functionality of the kernel
 L7_sysctl 'kernel.sysrq' do
