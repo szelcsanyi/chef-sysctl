@@ -87,3 +87,9 @@ end
 L7_sysctl 'kernel.perf_event_paranoid' do
   value '2'
 end
+
+# CVE-2016-5696 workaround
+L7_sysctl 'net.ipv4.tcp_challenge_ack_limit' do
+  comment 'CVE-2016-5696 workaround'
+  value '999999999'
+end
