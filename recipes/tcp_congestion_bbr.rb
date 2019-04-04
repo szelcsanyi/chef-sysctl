@@ -10,7 +10,7 @@ return if File.exist?('/proc/vz')
 # Not under kernel version 4.9
 kmajor, kminor = node[:kernel][:release].split('.')
 
-if (kmajor.to_i == 4 and kminor.to_i >= 9) or kmajor.to_i > 4
+if (kmajor.to_i == 4 && kminor.to_i >= 9) || kmajor.to_i > 4
 
   L7_sysctl 'net.core.default_qdisc' do
     value 'fq'
